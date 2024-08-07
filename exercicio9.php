@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 3</title>
+    <title>Exercício 9</title>
 </head>
 <body>
-    <?php
+<?php
         include 'funcoes.php';
         $num1 = "";
         $num2 = "";
+        $num3 = "";
     ?>
     <form method="POST">
         <label>Primeiro Número: </label>
@@ -18,10 +20,15 @@
         <label>Segundo Número: </label>
         <input type="number" id="num2" name="num2"><br><br>
 
+        <label>Terceiro Número: </label>
+        <input type="number" id="num3" name="num2"><br><br>
+
         <button>Calcular
         <?php
             $num1 = $_POST['num1'];
             $num2 = $_POST['num2'];
+            $num3 = $_POST['num3'];
+
         ?>  
         </button><br><br>
         
@@ -31,10 +38,9 @@
                 echo "Preencha os campos!";
             }else{
             
-            }echo "A multiplicação dos números digitados é: ".multiplicar($num1,$num2);
+            }echo "O valor de delta é: ".delta($num1,$num2,$num3);
            ?>
         </textArea>
 
-    </form> 
 </body>
 </html>
